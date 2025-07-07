@@ -26,23 +26,23 @@ const TiempoDeEspera = () => {
           </div>
 
           <div className="service-image">
-            <img src="/public/contact.png" alt="Contacto soporte" />
+            <img src="/contact.png" alt="Contacto soporte" />
           </div>
         </section>
 
         <section className="info-icons">
           <div className="info-item">
-            <img src="/public/check.png" alt="Check icon" />
+            <img src="/check.png" alt="Check icon" />
             <p>Contamos con personal altamente capacitado</p>
           </div>
           <div className="info-item">
-            <img src="/public/technician.png" alt="Técnico icono" />
+            <img src="/technician.png" alt="Técnico icono" />
             <p>
               Listos para solucionar cualquier imprevisto lo más rápido posible
             </p>
           </div>
           <div className="info-item">
-            <img src="/public/clock.png" alt="Reloj icono" />
+            <img src="/clock.png" alt="Reloj icono" />
             <p>Soporte y Respuesta inmediata</p>
           </div>
         </section>

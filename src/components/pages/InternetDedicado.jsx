@@ -19,7 +19,7 @@ const InternetDedicado = () => {
                   <span className="highlight">INTERNET</span> <br /> DEDICADO
                 </h1>
                 <img
-                  src="/public/estrellas.png"
+                  src="/estrellas.png"
                   alt="Estrellas decorativas"
                   className="estrellas-img"
                 />
@@ -32,7 +32,7 @@ const InternetDedicado = () => {
 
             {/* Imagen */}
             <div className="laptop">
-              <img src="/public/settings.png" alt="Laptop con ajustes" />
+              <img src="/settings.png" alt="Laptop con ajustes" />
             </div>
           </div>
         </section>
@@ -43,7 +43,7 @@ const InternetDedicado = () => {
           aria-labelledby="servicios-confiables"
         >
           <div className="service-inner">
-            <img src="/public/handshake.png" alt="Manos estrechándose" />
+            <img src="/handshake.png" alt="Manos estrechándose" />
             <h2 id="servicios-confiables">Servicios Confiables</h2>
             <p>
               Nuestra conexión es 100% en fibra óptica y nuestro soporte técnico
