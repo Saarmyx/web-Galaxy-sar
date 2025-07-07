@@ -1,0 +1,263 @@
+/* ---------- Hero Section ---------- */
+.seccion-hero {
+  background: url("/public/galaxia.png") center/cover no-repeat;
+  height: 534px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenido-hero {
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+
+.zona-texto {
+  max-width: 800px;
+}
+
+.zona-texto h1 {
+  font-size: 50px;
+  color: #ffc400;
+}
+
+.zona-texto .inter {
+  font-size: 67px;
+  line-height: 0.2;
+  color: #fff;
+}
+
+.subrayado {
+  font-size: 67px;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+.tv-adicional {
+  font-size: 60px;
+  color: #fff;
+}
+
+.caja-resaltada {
+  background: #ffc400;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 2px 20px;
+  display: inline-block;
+}
+
+.contenedor-estrellas {
+  display: flex;
+  gap: 20px;
+}
+
+.contenedor-estrellas img {
+  margin-top: -35px;
+  margin-left: -50px;
+}
+
+.zona-imagen img {
+  height: 600px;
+}
+
+/* Filtros laterales */
+.filtro-lado {
+  position: absolute;
+  top: 0;
+  width: 600px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.filtro-izquierdo {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #000,
+    #000,
+    #000,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+}
+
+.filtro-derecho {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    #000,
+    #000,
+    #000,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+}
+
+/* ============= RESPONSIVE ============= */
+
+/* Laptop media */
+@media (max-width: 1440px) {
+  .seccion-hero {
+    height: 470px;
+  }
+
+  .contenido-hero {
+    padding: 0 200px;
+  }
+
+  .zona-texto h1 {
+    font-size: 38px;
+    max-width: 700px;
+  }
+
+  .zona-texto .inter {
+    font-size: 50px;
+    line-height: 0.2;
+  }
+
+  .subrayado {
+    font-size: 50px;
+    -webkit-text-stroke: 1.5px #fff;
+  }
+
+  .tv-adicional {
+    font-size: 42px;
+  }
+
+  .contenedor-estrellas img {
+    width: 80px;
+  }
+
+  .zona-imagen img {
+    height: 480px;
+  }
+}
+
+/* Tablet horizontal (1024px) */
+@media (max-width: 1024px) {
+  .seccion-hero {
+    height: 400px;
+  }
+
+  .contenido-hero {
+    padding: 0 150px;
+  }
+
+  .zona-texto h1 {
+    font-size: 33px;
+    max-width: 600px;
+  }
+
+  .zona-texto .inter {
+    font-size: 45px;
+    line-height: 0.2;
+  }
+
+  .subrayado {
+    font-size: 45px;
+    -webkit-text-stroke: 1.5px #fff;
+  }
+
+  .tv-adicional {
+    font-size: 36px;
+  }
+
+  .contenedor-estrellas img {
+    width: 60px;
+  }
+
+  .zona-imagen img {
+    height: 400px;
+  }
+}
+
+/* Tablet vertical (768px) */
+@media (max-width: 768px) {
+  .seccion-hero {
+    height: 300px;
+  }
+
+  .contenido-hero {
+    padding: 0 100px;
+  }
+
+  .zona-texto h1 {
+    font-size: 28px;
+    max-width: 500px;
+  }
+
+  .zona-texto .inter {
+    font-size: 40px;
+    line-height: 0.2;
+  }
+
+  .subrayado {
+    font-size: 40px;
+    -webkit-text-stroke: 1.5px #fff;
+  }
+
+  .tv-adicional {
+    font-size: 30px;
+  }
+
+  .contenedor-estrellas img {
+    width: 50px;
+  }
+
+  .zona-imagen img {
+    height: 300px;
+  }
+}
+
+/* Móvil (425px y menos) */
+@media (max-width: 425px) {
+  .seccion-hero {
+    height: 250px;
+  }
+
+  .contenido-hero {
+    padding: 0 20px;
+  }
+
+  .zona-texto h1 {
+    font-size: 24px;
+    max-width: 100%;
+  }
+
+  .zona-texto .inter {
+    font-size: 35px;
+    line-height: 0.2;
+  }
+
+  .subrayado {
+    font-size: 35px;
+    -webkit-text-stroke: 1.5px #fff;
+  }
+
+  .tv-adicional {
+    font-size: 20px;
+  }
+
+  .contenedor-estrellas img {
+    width: 40px;
+  }
+
+  .zona-imagen img {
+    height: 250px;
+  }
+}

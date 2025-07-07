@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Tipografías personalizadas */
+@font-face {
+  font-family: "LemonMilk";
+  src: url("/fonts/lemon_milk/LEMONMILK-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CovesBold";
+  src: url("/fonts/Coves/CovesBold.otf") format("opentype");
+  font-weight: bold;
+}
+
+/* =====================
+   RESET GLOBAL ROBUSTO
+===================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  font-family: "Roboto", "CovesBold", Arial, sans-serif;
+  font-size: 18px; /* Escalable para 1080p */
+  background-color: var(--color-blanco);
+  color: var(--color-negro);
+}
+
+/* Eliminar estilos por defecto de inputs, etc */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =====================
+   VARIABLES DE COLOR
+===================== */
+:root {
+  --color-principal: #f5b500;
+  --color-negro: #0a0a0a;
+  --color-blanco: #f1f1f1;
+}
+
+/* =====================
+   ESTILOS GENERALES
+===================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =====================
+   HEADER SUPERIOR
+===================== */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-negro);
+  padding: 20px 100px;
+  height: 100px;
+}
+
+.top-header .number {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-blanco);
+}
+
+/* =====================
+   NAVBAR PRINCIPAL
+===================== */
+.nav-bar {
+  background-color: var(--color-principal);
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 0;
+}
+
+.nav-bar li a {
+  font-size: 20px;
+  color: var(--color-blanco);
+  padding-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-bar li a:hover,
+.nav-bar li a.activo {
+  color: var(--color-negro);
+}
+
+/* =====================
+   RESPONSIVE: NAV Y HEADER
+===================== */
+@media (max-width: 1024px) {
+  .top-header {
+    height: auto;
+    padding: 15px 100px;
+    gap: 10px;
+  }
+
+  .nav-bar {
+    height: auto;
+    padding: 10px;
+  }
+
+  .nav-bar ul {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .nav-bar li a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .top-header .number {
+    font-size: 16px;
+  }
+
+  .nav-bar li a {
+    font-size: 16px;
+  }
+}

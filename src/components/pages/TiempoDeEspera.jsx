@@ -1,0 +1,60 @@
+import React from "react";
+import "./TiempoDeEspera.css";
+import Header from "../DoubleHeader";
+import Footer from "../Footer";
+import CTASection from "../CTASection";
+
+const TiempoDeEspera = () => {
+  return (
+    <>
+      <Header active="soporte" />
+      <main
+        className="min-h-screen bg-white text-gray-800"
+        aria-label="Contenido principal"
+      >
+        <section className="service-section">
+          <div className="service-text">
+            <div className="contenedor-estrellas">
+              <h1>
+                <span className="highlight">TIEMPO DE ESPERA</span>
+              </h1>
+            </div>
+            <p>
+              Atención y soporte técnico inmediato para garantizar que siempre
+              cuentes con tu servicio de internet.
+            </p>
+          </div>
+
+          <div className="service-image">
+            <img src="/public/contact.png" alt="Contacto soporte" />
+          </div>
+        </section>
+
+        <section className="info-icons">
+          <div className="info-item">
+            <img src="/public/check.png" alt="Check icon" />
+            <p>Contamos con personal altamente capacitado</p>
+          </div>
+          <div className="info-item">
+            <img src="/public/technician.png" alt="Técnico icono" />
+            <p>
+              Listos para solucionar cualquier imprevisto lo más rápido posible
+            </p>
+          </div>
+          <div className="info-item">
+            <img src="/public/clock.png" alt="Reloj icono" />
+            <p>Soporte y Respuesta inmediata</p>
+          </div>
+        </section>
+
+        {/* Llamado a la acción */}
+        <section aria-label="Llamado a la acción">
+          <CTASection />
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default TiempoDeEspera;
