@@ -12,7 +12,7 @@ const CTASection = () => (
       </div>
 
       <div className="cta-image">
-        <img src="/public/pc.png" alt="Persona con laptop conectada" />
+        <img src="/pc.png" alt="Persona con laptop conectada" />
         <h2>Internet Dedicado</h2>
       </div>
     </div>

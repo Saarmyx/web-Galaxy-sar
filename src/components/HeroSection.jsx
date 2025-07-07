@@ -12,7 +12,7 @@ const HeroSection = () => (
             PÁSATE <br />
             AL NUEVO
           </h1>
-          <img src="../public/estrellas.png" alt="Estrellas" />
+          <img src="/estrellas.png" alt="Estrellas" />
         </div>
         <h2 className="inter">INTERNET</h2>
         <h2 className="subrayado">ILIMITADO</h2>
@@ -21,7 +21,7 @@ const HeroSection = () => (
         </div>
       </div>
       <div className="zona-imagen">
-        <img src="/public/mujer-hero.png" alt="Mujer con laptop" />
+        <img src="/mujer-hero.png" alt="Mujer con laptop" />
       </div>
     </div>
   </section>

@@ -8,7 +8,7 @@ const DoubleHeader = ({ active }) => {
       {/* Header superior */}
       <div className="top-header">
         <div className="logo">
-          <img src="/public/logo.png" alt="Logo" />
+          <img src="/logo.png" alt="Logo" />
         </div>
         <div className="number">(+57) 300 9122259</div>
       </div>
