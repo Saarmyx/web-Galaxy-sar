@@ -12,7 +12,7 @@ const HeroSection = () => (
             PÁSATE <br />
             AL NUEVO
           </h1>
-          <img src="/public/estrellas.png" alt="Estrellas" />
+          <img src="../public/estrellas.png" alt="Estrellas" />
         </div>
         <h2 className="inter">INTERNET</h2>
         <h2 className="subrayado">ILIMITADO</h2>
