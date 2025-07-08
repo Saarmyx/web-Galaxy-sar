@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CTASection = () => (
   <section className="cta-section">
@@ -8,9 +9,9 @@ const CTASection = () => (
           <h2>Adquiere tu plan</h2>
           <p>AL MEJOR COSTO BENEFICIO</p>
         </div>
-        <a href="/contacto">
+        <Link to="/contacto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <button className="cta-button">Contáctanos Ahora</button>
-        </a>
+        </Link>
       </div>
 
       <div className="cta-image">
