@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => (
   <footer className="footer">
@@ -26,24 +27,30 @@ const Footer = () => (
         <h4>SERVICIOS</h4>
         <ul>
           <li>
-            <a href="/" rel="noopener noreferrer">
+            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               Hogar
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/internet-dedicado" rel="noopener noreferrer">
+            <Link
+              to="/internet-dedicado"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               Empresas
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/tiempo-de-espera" rel="noopener noreferrer">
+            <Link
+              to="/tiempo-de-espera"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               Soporte Tecnico
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contacto" rel="noopener noreferrer">
+            <Link to="/contacto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               Contactenos
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
