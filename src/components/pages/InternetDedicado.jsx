@@ -12,6 +12,10 @@ const InternetDedicado = () => {
         {/* Sección principal */}
         <section className="dedicado-section" aria-labelledby="titulo-dedicado">
           <div className="dedicado-content">
+            {/* Imagen */}
+            <div className="laptop">
+              <img src="/settings.png" alt="Laptop con ajustes" />
+            </div>
             {/* Texto */}
             <div className="text-section">
               <div className="contenedor-estrellas-e">
@@ -24,11 +28,6 @@ const InternetDedicado = () => {
                 Tu negocio requiere una conexión dedicada, así podrás brindarle mejores soluciones a
                 tus clientes.
               </p>
-            </div>
-
-            {/* Imagen */}
-            <div className="laptop">
-              <img src="/settings.png" alt="Laptop con ajustes" />
             </div>
           </div>
         </section>

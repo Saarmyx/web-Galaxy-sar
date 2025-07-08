@@ -8,6 +8,7 @@
 
 .dedicado-content {
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -107,6 +108,46 @@
   padding-bottom: 50px;
 }
 
+/* Laptop (≤1440px) */
+@media (max-width: 1440px) {
+  .dedicado-section {
+    padding: 100px 2px;
+  }
+
+  .dedicado-section .text-section h1 {
+    font-size: 42px;
+  }
+
+  .dedicado-section .text-section p {
+    font-size: 20px;
+  }
+
+  .dedicado-content {
+    gap: 60px;
+  }
+
+  .estrellas-img {
+    width: 120px;
+    margin-top: -60px;
+  }
+
+  .laptop img {
+    width: 240px;
+  }
+
+  .service-container h2 {
+    font-size: 32px;
+  }
+
+  .service-container p {
+    font-size: 18px;
+  }
+
+  .service-container .note {
+    font-size: 11px;
+  }
+}
+
 /* Pantallas muy grandes (≥1600px) */
 @media (min-width: 1600px) {
   .dedicado-section {
@@ -129,12 +170,17 @@
     font-size: 22px;
   }
 }
-
-/* Tablet vertical (≤768px) */
+/* ===== Tablet vertical (≤768px) ===== */
 @media (max-width: 768px) {
+  /* ===== Internet Dedicado ===== */
+  .dedicado-section {
+    padding: 60px 20px;
+  }
+
   .dedicado-content {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
   }
 
   .dedicado-section .text-section {
@@ -142,9 +188,23 @@
     max-width: 100%;
   }
 
+  .dedicado-section .text-section h1 {
+    font-size: 36px;
+  }
+
+  .dedicado-section .text-section p {
+    font-size: 18px;
+  }
+
   .contenedor-estrellas-e {
     justify-content: center;
     margin-top: 20px;
+  }
+
+  .estrellas-img {
+    width: 80px;
+    margin-top: -40px;
+    margin-left: -50px;
   }
 
   .laptop {
@@ -152,9 +212,24 @@
   }
 
   .laptop img {
-    width: 160px;
+    width: 200px;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  /* ===== Servicios ===== */
+  .service-section {
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .service-text h1 {
+    font-size: 36px;
+  }
+
+  .service-text p {
+    font-size: 18px;
   }
 
   .service-container {
@@ -172,16 +247,32 @@
   .service-container .note {
     font-size: 12px;
   }
+
+  .service-image img {
+    width: 140px;
+  }
+
+  .info-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .info-item {
+    margin: 0 auto;
+  }
 }
 
-/* Móviles (≤480px) */
-@media (max-width: 480px) {
+/* ===== Móvil (≤425px) ===== */
+@media (max-width: 425px) {
+  /* Internet Dedicado */
   .dedicado-section {
     padding: 40px 16px;
   }
 
   .dedicado-section .text-section h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .dedicado-section .text-section p {
@@ -191,10 +282,20 @@
   .estrellas-img {
     width: 60px;
     margin-top: -30px;
+    margin-left: -50px;
   }
 
   .laptop img {
-    width: 130px;
+    width: 120px;
+  }
+
+  /* Servicios */
+  .service-text h1 {
+    font-size: 28px;
+  }
+
+  .service-text p {
+    font-size: 16px;
   }
 
   .service-container h2 {
@@ -205,7 +306,30 @@
     font-size: 14px;
   }
 
+  .service-container img {
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
   .service-container .note {
     font-size: 10px;
+  }
+
+  .service-image img {
+    width: 120px;
+  }
+
+  .info-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .info-item img {
+    width: 100px;
+  }
+
+  .info-item p {
+    font-size: 14px;
   }
 }
