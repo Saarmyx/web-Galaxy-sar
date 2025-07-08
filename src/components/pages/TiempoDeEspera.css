@@ -119,10 +119,6 @@
     width: 160px;
   }
 
-  .contenedor-estrellas {
-    justify-content: center;
-  }
-
   .info-icons {
     justify-content: center;
     gap: 30px;

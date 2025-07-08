@@ -55,6 +55,7 @@
 }
 
 .contenedor-estrellas {
+  text-align: left;
   display: flex;
   gap: 20px;
 }
@@ -227,7 +228,7 @@
   }
 
   .contenido-hero {
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
   .zona-texto h1 {
@@ -254,7 +255,8 @@
   }
 
   .zona-imagen img {
-    height: 220px;
+    margin-top: 20px;
+    height: 200px;
   }
 
   .filtro-izquierdo {
