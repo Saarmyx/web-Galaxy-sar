@@ -3,7 +3,7 @@
 /* === Sección principal dedicada === */
 .dedicado-section {
   padding: 140px 80px;
-  background-color: #f1f1f3;
+  background-color: #e4e4e4;
 }
 
 .dedicado-content {
@@ -19,7 +19,7 @@
 
 /* === Texto === */
 .dedicado-section .text-section {
-  max-width: 600px;
+  max-width: 399px;
   margin-right: 80px;
 }
 
@@ -35,8 +35,9 @@
 }
 
 .dedicado-section .text-section p {
-  font-family: 'CovesLight';
-  font-size: 30px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 22px;
   color: #666;
   margin-top: 10px;
 }
@@ -66,6 +67,7 @@
 .service-container {
   background: linear-gradient(to bottom, transparent, #ffffff, rgba(235, 235, 235, 0.8));
   text-align: center;
+  padding-top: 50px;
 }
 
 .service-inner {
@@ -108,6 +110,28 @@
   padding-bottom: 50px;
 }
 
+/* Pantallas muy grandes (≥1600px) */
+@media (min-width: 1600px) {
+  .dedicado-section {
+    padding: 120px 100px;
+  }
+
+  .dedicado-section .text-section h1 {
+    font-size: 52px;
+  }
+
+  .dedicado-section .text-section p {
+    font-size: 24px;
+  }
+
+  .service-container h2 {
+    font-size: 42px;
+  }
+
+  .service-container p {
+    font-size: 22px;
+  }
+}
 /* Laptop (≤1440px) */
 @media (max-width: 1440px) {
   .dedicado-section {
@@ -148,28 +172,6 @@
   }
 }
 
-/* Pantallas muy grandes (≥1600px) */
-@media (min-width: 1600px) {
-  .dedicado-section {
-    padding: 120px 100px;
-  }
-
-  .dedicado-section .text-section h1 {
-    font-size: 52px;
-  }
-
-  .dedicado-section .text-section p {
-    font-size: 24px;
-  }
-
-  .service-container h2 {
-    font-size: 42px;
-  }
-
-  .service-container p {
-    font-size: 22px;
-  }
-}
 /* ===== Tablet vertical (≤768px) ===== */
 @media (max-width: 768px) {
   /* ===== Internet Dedicado ===== */
@@ -186,6 +188,7 @@
   .dedicado-section .text-section {
     margin-right: 0;
     max-width: 100%;
+    max-width: 500px;
   }
 
   .dedicado-section .text-section h1 {

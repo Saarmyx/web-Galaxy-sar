@@ -134,4 +134,8 @@
   .footer-bottom p {
     font-size: 13px;
   }
+
+  .social-icons {
+    justify-content: center;
+  }
 }

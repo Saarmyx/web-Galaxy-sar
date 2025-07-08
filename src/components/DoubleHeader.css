@@ -255,3 +255,20 @@ ul {
     font-size: 90%;
   }
 }
+
+@media (max-width: 375px) {
+  .nav-bar li a {
+    font-size: 12px;
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 80%;
+  }
+}
