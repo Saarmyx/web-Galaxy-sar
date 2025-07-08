@@ -173,10 +173,6 @@
     grid-template-columns: 1fr;
     place-items: center;
   }
-
-  .plan-card {
-    padding: 40px 30px;
-  }
 }
 
 /* Responsive (≤425px) */
