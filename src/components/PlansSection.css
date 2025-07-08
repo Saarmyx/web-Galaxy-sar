@@ -12,15 +12,15 @@
 }
 
 .plans-title {
-  font-size: 48px;
+  font-size: 55px;
   color: #ffa500;
-  font-weight: 800;
   margin-bottom: 10px;
 }
 
 .plans-subtitle {
-  font-size: 22px;
-  font-weight: 30;
+  font-family: 'CovesLight';
+  font-size: 38px;
+  line-height: 1.2;
   color: #666;
   margin-bottom: 60px;
 }
@@ -33,6 +33,7 @@
 }
 
 .plan-card {
+  font-family: 'CovesBold';
   background: #fff;
   border-radius: 12px;
   padding: 40px 30px;
@@ -50,23 +51,24 @@
 }
 
 .plan-header {
+  font-family: 'Cunia';
   background: #ffa500;
   color: #000;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 36px;
   padding: 18px;
   margin: -40px -30px 30px -30px;
   border-radius: 12px 12px 0 0;
 }
 
 .plan-price {
+  font-family: 'Cunia';
   font-size: 40px;
   color: #333;
-  font-weight: 700;
 }
 
 .plan-period {
-  font-size: 16px;
+  font-family: 'CovesBold';
+  font-size: 20px;
   color: #666;
   margin-bottom: 10px;
 }
@@ -77,14 +79,15 @@
 }
 
 .plan-features h4 {
+  font-family: 'CovesBold';
   font-size: 18px;
   color: #333;
   margin-bottom: 5px;
   text-align: center;
-  font-weight: 600;
 }
 
 .plan-speed {
+  font-family: 'LemonMilk';
   font-size: 42px;
   color: #ffa500;
   display: flex;
@@ -104,15 +107,16 @@
 }
 
 .plan-details {
+  font-family: 'CovesBold';
   font-size: 15px;
   color: #666;
   margin-bottom: 15px;
+  font-weight: 500;
 }
 
 .plan-detail-item {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
 }
 
 .check-icon {
@@ -131,7 +135,7 @@
 }
 
 .check-icon::after {
-  content: "✓";
+  content: '✓';
 }
 
 .plan-bottom {
@@ -141,119 +145,112 @@
 }
 
 .plan-monthly {
+  font-family: 'Cunia';
   font-size: 22px;
   color: #333;
   margin-bottom: 5px;
-  font-weight: 600;
 }
 
 .plan-disclaimer {
+  font-family: 'CovesBold';
   font-size: 11px;
   color: #999;
   line-height: 1.2;
 }
-
-/* ========================
-   Responsive Media Queries
-======================== */
-
-/* Laptop (1440px) */
-@media (max-width: 1440px) {
-  .plans-title {
-    font-size: 40px;
-  }
-
-  .plans-subtitle {
-    font-size: 20px;
-  }
-
-  .plan-card {
-    width: 300px;
-  }
-}
-
-/* Tablet horizontal (1024px) */
-@media (max-width: 1024px) {
-  .plans-grid {
-    gap: 30px;
-  }
-
-  .plan-card {
-    width: 280px;
-    padding: 30px 20px;
-  }
-
-  .plan-header {
-    margin: -30px -20px 20px -20px;
-  }
-
-  .plan-price {
-    font-size: 36px;
-  }
-
-  .plan-speed {
-    font-size: 36px;
-  }
-}
-
-/* Tablet vertical (768px) */
+/* Móvil mejorado (≤768px) */
 @media (max-width: 768px) {
-  .plans-content {
-    padding: 0 20px;
-  }
-
-  .plans-title {
-    font-size: 36px;
-  }
-
-  .plans-subtitle {
-    font-size: 18px;
-  }
-
   .plans-grid {
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 
   .plan-card {
     width: 100%;
-    max-width: 400px;
-  }
-}
-
-/* Móvil (425px y menos) */
-@media (max-width: 425px) {
-  .plans-title {
-    font-size: 30px;
-  }
-
-  .plans-subtitle {
-    font-size: 16px;
-    margin-bottom: 40px;
+    max-width: 360px;
   }
 
   .plan-header {
-    font-size: 16px;
-    padding: 14px;
+    font-size: 24px;
   }
 
   .plan-price {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .plan-speed {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .plan-speed span {
-    font-size: 12px;
-    padding: 2px 8px;
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .plan-details {
+    font-size: 14px;
+  }
+
+  .plan-monthly {
+    font-size: 18px;
+  }
+}
+
+/* Móvil pequeño (≤425px) */
+@media (max-width: 425px) {
+  .plans-content {
+    padding: 0 15px;
+  }
+
+  .plans-title {
+    font-size: 26px;
+    margin-bottom: 5px;
+  }
+
+  .plans-subtitle {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .plan-card {
+    padding: 24px 16px;
+  }
+
+  .plan-header {
+    font-size: 20px;
+    padding: 12px;
+    margin: -24px -16px 20px -16px;
+  }
+
+  .plan-speed {
+    font-size: 24px;
+  }
+
+  .plan-disclaimer {
+    font-size: 9px;
+  }
+}
+
+/* Extra pequeño (≤375px) */
+@media (max-width: 375px) {
+  .plan-price {
+    font-size: 24px;
+  }
+
+  .plan-speed {
+    font-size: 22px;
+  }
+
+  .plan-speed span {
+    font-size: 10px;
+    padding: 1px 5px;
+  }
+
+  .plan-details {
+    font-size: 13px;
   }
 
   .plan-monthly {
     font-size: 16px;
-  }
-
-  .plan-disclaimer {
-    font-size: 10px;
   }
 }

@@ -1,7 +1,6 @@
 /* ---------- Hero Section ---------- */
 .seccion-hero {
-  background: url("/public/galaxia.png") center/cover no-repeat;
-  height: 534px;
+  background: url('/public/galaxia.png') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +20,7 @@
 
 .zona-texto {
   max-width: 800px;
+  font-family: 'LemonMilk';
 }
 
 .zona-texto h1 {
@@ -117,6 +117,7 @@
   }
 
   .contenido-hero {
+    margin-top: 30px;
     padding: 0 200px;
   }
 
@@ -231,7 +232,7 @@
   }
 
   .contenido-hero {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 
   .zona-texto h1 {
@@ -258,6 +259,30 @@
   }
 
   .zona-imagen img {
-    height: 250px;
+    height: 220px;
+  }
+
+  .filtro-izquierdo {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.2),
+      transparent
+    );
+  }
+
+  .filtro-derecho {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.2),
+      transparent
+    );
   }
 }

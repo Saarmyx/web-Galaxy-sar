@@ -18,16 +18,15 @@
 
 /* === Texto === */
 .dedicado-section .text-section {
-  max-width: 700px;
+  max-width: 600px;
+  margin-right: 80px;
 }
 
 .dedicado-section .text-section h1 {
-  font-size: 80px;
-  font-weight: 800;
+  font-size: 55px;
+  font-weight: bold;
   color: #000;
   margin: 0;
-  line-height: 1.08;
-  word-break: break-word;
 }
 
 .dedicado-section .highlight {
@@ -35,11 +34,10 @@
 }
 
 .dedicado-section .text-section p {
-  font-size: 28px;
+  font-family: 'CovesLight';
+  font-size: 30px;
   color: #666;
-  margin-top: 28px;
-  line-height: 1.6;
-  word-break: break-word;
+  margin-top: 10px;
 }
 
 /* === Estrellas === */
@@ -47,7 +45,6 @@
   display: flex;
   align-items: flex-start;
   gap: 36px;
-  margin-top: 40px;
   flex-wrap: wrap;
 }
 
@@ -61,21 +58,13 @@
 
 /* === Imagen laptop === */
 .laptop img {
-  width: 480px;
-  max-width: 100%;
-  height: auto;
+  width: 300px;
 }
 
 /* ========== Sección Servicios ========== */
 .service-container {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    #ffffff,
-    rgba(235, 235, 235, 0.8)
-  );
+  background: linear-gradient(to bottom, transparent, #ffffff, rgba(235, 235, 235, 0.8));
   text-align: center;
-  padding: 140px 80px 100px;
 }
 
 .service-inner {
@@ -88,117 +77,87 @@
 }
 
 .service-container img {
-  width: 240px;
-  margin-bottom: 40px;
+  width: 253px;
   max-width: 100%;
   height: auto;
 }
 
 .service-container h2 {
-  font-size: 48px;
+  font-size: 40px;
   color: #1c1c1c;
-  margin-bottom: 28px;
   font-weight: 700;
   word-break: break-word;
 }
 
 .service-container p {
-  font-size: 26px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 22px;
   color: #666;
-  margin: 16px auto;
-  max-width: 900px;
-  line-height: 1.7;
-  word-break: break-word;
+  max-width: 600px;
+  padding-bottom: 20px;
 }
 
 .service-container .note {
-  font-size: 16px;
-  font-weight: bold;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 500;
   color: #000;
-  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-/* ========== Responsive Mejorado ========== */
-
-/* Desktop grande (hasta 1600px) */
-@media (max-width: 1600px) {
+/* Pantallas muy grandes (≥1600px) */
+@media (min-width: 1600px) {
   .dedicado-section {
-    padding: 100px 60px;
-  }
-
-  .dedicado-content {
-    gap: 60px;
+    padding: 120px 100px;
   }
 
   .dedicado-section .text-section h1 {
-    font-size: 64px;
+    font-size: 52px;
   }
 
   .dedicado-section .text-section p {
-    font-size: 22px;
-  }
-
-  .estrellas-img {
-    width: 180px;
-  }
-
-  .laptop img {
-    width: 340px;
-  }
-
-  .service-container img {
-    width: 100px;
+    font-size: 24px;
   }
 
   .service-container h2 {
-    font-size: 36px;
+    font-size: 42px;
   }
 
   .service-container p {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
-/* Laptop (hasta 1200px) */
-@media (max-width: 1200px) {
+/* Tablet vertical (≤768px) */
+@media (max-width: 768px) {
   .dedicado-content {
     flex-direction: column;
     text-align: center;
-    gap: 50px;
-  }
-
-  .dedicado-section {
-    padding: 80px 40px;
   }
 
   .dedicado-section .text-section {
-    max-width: 95%;
-  }
-
-  .dedicado-section .text-section h1 {
-    font-size: 48px;
-  }
-
-  .dedicado-section .text-section p {
-    font-size: 18px;
+    margin-right: 0;
+    max-width: 100%;
   }
 
   .contenedor-estrellas-e {
     justify-content: center;
-    gap: 20px;
+    margin-top: 20px;
   }
 
-  .estrellas-img {
-    width: 120px;
-    margin: 0 auto;
+  .laptop {
+    text-align: center;
   }
 
   .laptop img {
-    width: 260px;
+    width: 160px;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
-  .service-container img {
-    width: 80px;
+  .service-container {
+    padding: 60px 20px;
   }
 
   .service-container h2 {
@@ -207,45 +166,6 @@
 
   .service-container p {
     font-size: 16px;
-  }
-}
-
-/* Tablet (hasta 900px) */
-@media (max-width: 900px) {
-  .dedicado-section {
-    padding: 60px 20px;
-  }
-
-  .dedicado-content {
-    gap: 40px;
-  }
-
-  .dedicado-section .text-section h1 {
-    font-size: 36px;
-  }
-
-  .dedicado-section .text-section p {
-    font-size: 16px;
-  }
-
-  .estrellas-img {
-    width: 90px;
-  }
-
-  .laptop img {
-    width: 180px;
-  }
-
-  .service-container img {
-    width: 60px;
-  }
-
-  .service-container h2 {
-    font-size: 22px;
-  }
-
-  .service-container p {
-    font-size: 14px;
   }
 
   .service-container .note {
@@ -253,14 +173,14 @@
   }
 }
 
-/* Móviles (hasta 600px) */
-@media (max-width: 600px) {
+/* Móviles (≤480px) */
+@media (max-width: 480px) {
   .dedicado-section {
     padding: 40px 16px;
   }
 
   .dedicado-section .text-section h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .dedicado-section .text-section p {
@@ -268,37 +188,23 @@
   }
 
   .estrellas-img {
-    width: 70px;
+    width: 60px;
+    margin-top: -30px;
   }
 
   .laptop img {
-    width: 150px;
-  }
-
-  .service-container {
-    padding: 40px 16px 30px;
-  }
-
-  .service-container img {
-    width: 50px;
+    width: 130px;
   }
 
   .service-container h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .service-container p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .service-container .note {
     font-size: 10px;
   }
-}
-
-/* === Seguridad visual global === */
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
 }

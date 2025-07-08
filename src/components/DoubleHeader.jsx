@@ -1,15 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./DoubleHeader.css";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import './DoubleHeader.css'
 
 const DoubleHeader = ({ active }) => {
   return (
     <div>
       {/* Header superior */}
       <div className="top-header">
+        {/* Logo para escritorio */}
         <div className="logo">
           <img src="/logo.png" alt="Logo" />
         </div>
+
+        {/* Icono para móvil */}
+        <div className="icono">
+          <img src="/icono.png" alt="Icon" />
+        </div>
+
         <div className="number">(+57) 300 9122259</div>
       </div>
 
@@ -18,31 +25,30 @@ const DoubleHeader = ({ active }) => {
         <nav>
           <ul>
             <li>
-              <Link to="/" className={active === "hogar" ? "activo" : ""}>
+              <Link
+                to="/"
+                className={
+                  !active ||
+                  (active !== 'dedicado' && active !== 'soporte' && active !== 'contacto')
+                    ? 'activo'
+                    : ''
+                }
+              >
                 HOGAR
               </Link>
             </li>
             <li>
-              <Link
-                to="/internet-dedicado"
-                className={active === "dedicado" ? "activo" : ""}
-              >
+              <Link to="/internet-dedicado" className={active === 'dedicado' ? 'activo' : ''}>
                 EMPRESAS
               </Link>
             </li>
             <li>
-              <Link
-                to="/tiempo-de-espera"
-                className={active === "soporte" ? "activo" : ""}
-              >
+              <Link to="/tiempo-de-espera" className={active === 'soporte' ? 'activo' : ''}>
                 SOPORTE
               </Link>
             </li>
             <li>
-              <Link
-                to="/contacto"
-                className={active === "contacto" ? "activo" : ""}
-              >
+              <Link to="/contacto" className={active === 'contacto' ? 'activo' : ''}>
                 CONTACTO
               </Link>
             </li>
@@ -50,7 +56,7 @@ const DoubleHeader = ({ active }) => {
         </nav>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DoubleHeader;
+export default DoubleHeader

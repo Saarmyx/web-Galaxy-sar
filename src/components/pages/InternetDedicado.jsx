@@ -1,8 +1,8 @@
-import React from "react";
-import "./Empresas.css";
-import Header from "../DoubleHeader";
-import Footer from "../Footer";
-import CTASection from "../CTASection";
+import React from 'react'
+import './Empresas.css'
+import Header from '../DoubleHeader'
+import Footer from '../Footer'
+import CTASection from '../CTASection'
 
 const InternetDedicado = () => {
   return (
@@ -18,15 +18,11 @@ const InternetDedicado = () => {
                 <h1 id="titulo-dedicado">
                   <span className="highlight">INTERNET</span> <br /> DEDICADO
                 </h1>
-                <img
-                  src="/estrellas.png"
-                  alt="Estrellas decorativas"
-                  className="estrellas-img"
-                />
+                <img src="/estrellas.png" alt="Estrellas decorativas" className="estrellas-img" />
               </div>
               <p>
-                Tu negocio requiere una conexión dedicada, así podrás brindarle
-                mejores soluciones a tus clientes.
+                Tu negocio requiere una conexión dedicada, así podrás brindarle mejores soluciones a
+                tus clientes.
               </p>
             </div>
 
@@ -38,19 +34,16 @@ const InternetDedicado = () => {
         </section>
 
         {/* Sección de servicio */}
-        <section
-          className="service-container"
-          aria-labelledby="servicios-confiables"
-        >
+        <section className="service-container" aria-labelledby="servicios-confiables">
           <div className="service-inner">
             <img src="/handshake.png" alt="Manos estrechándose" />
             <h2 id="servicios-confiables">Servicios Confiables</h2>
             <p>
-              Nuestra conexión es 100% en fibra óptica y nuestro soporte técnico
-              es humano. ¡No usamos robots para atenderte!
+              Nuestra conexión es 100% en fibra óptica y nuestro soporte técnico es humano. ¡No
+              usamos robots para atenderte!
             </p>
             <p className="note">
-              Soporte 24/7, porque tu negocio merece lo mejor.
+              Soporte 24 horas al día 7 dias a la semana, por que negocio merece lo mejor.
             </p>
           </div>
         </section>
@@ -59,7 +52,7 @@ const InternetDedicado = () => {
       </main>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default InternetDedicado;
+export default InternetDedicado

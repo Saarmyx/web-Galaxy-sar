@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const CTASection = () => (
   <section className="cta-section">
@@ -8,7 +8,9 @@ const CTASection = () => (
           <h2>Adquiere tu plan</h2>
           <p>AL MEJOR COSTO BENEFICIO</p>
         </div>
-        <button className="cta-button">Contáctanos Ahora</button>
+        <a href="/contacto">
+          <button className="cta-button">Contáctanos Ahora</button>
+        </a>
       </div>
 
       <div className="cta-image">
@@ -17,6 +19,6 @@ const CTASection = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default CTASection;
+export default CTASection

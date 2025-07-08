@@ -1,5 +1,6 @@
 /* ---------- Contact Section ---------- */
 .contact-section {
+  font-family: 'Roboto';
   display: flex;
   justify-content: center;
   align-items: center;

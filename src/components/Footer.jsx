@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Footer = () => (
   <footer className="footer">
@@ -7,10 +7,18 @@ const Footer = () => (
         <h4>CONOCENOS</h4>
         <ul>
           <li>
-            <a href="#">Hosting</a>
+            <a href="https://internext.com.co/hosting" target="_blank" rel="noopener noreferrer">
+              Hosting
+            </a>
           </li>
           <li>
-            <a href="#">E-mail Corporativo</a>
+            <a
+              href="https://internext.com.co/email-corporativo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              E-mail Corporativo
+            </a>
           </li>
         </ul>
       </div>
@@ -18,16 +26,24 @@ const Footer = () => (
         <h4>SERVICIOS</h4>
         <ul>
           <li>
-            <a href="#">Hogar</a>
+            <a href="/" rel="noopener noreferrer">
+              Hogar
+            </a>
           </li>
           <li>
-            <a href="#">Empresas</a>
+            <a href="/internet-dedicado" rel="noopener noreferrer">
+              Empresas
+            </a>
           </li>
           <li>
-            <a href="#">Soporte Tecnico</a>
+            <a href="/tiempo-de-espera" rel="noopener noreferrer">
+              Soporte Tecnico
+            </a>
           </li>
           <li>
-            <a href="#">Contactenos</a>
+            <a href="/contacto" rel="noopener noreferrer">
+              Contactenos
+            </a>
           </li>
         </ul>
       </div>
@@ -36,12 +52,12 @@ const Footer = () => (
         <ul>
           <li>
             <strong> E-mail:</strong> <br />
-            ventas@internext.com.co
+            <a href="mailto:ventas@internext.com.co">ventas@internext.com.co</a>
           </li>
           <li>
             <strong>Teléfono: </strong>
             <br />
-            (+57) 300 9123399
+            <a href="tel:+573009123399">(+57) 300 9123399</a>
           </li>
           <li>
             <strong>Horario:</strong> <br />
@@ -51,13 +67,33 @@ const Footer = () => (
       </div>
       <div className="footer-section">
         <h4>SÍGUENOS EN:</h4>
-        <ul></ul>
+        <ul>
+          {/* Ejemplo de redes sociales */}
+          <li>
+            <a
+              href="https://facebook.com/internextcolombia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/internextcolombia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <div className="footer-bottom">
       <p>&copy; 2024 Galaxy Internet. Todos los derechos reservados.</p>
     </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer
