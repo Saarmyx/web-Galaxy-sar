@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 const Footer = () => (
   <footer className="footer">
     <div className="footer-content">
       <div className="footer-section">
-        <h4>CONOCENOS</h4>
+        <h4>CONÓCENOS</h4>
         <ul>
           <li>
             <a href="https://internext.com.co/hosting" target="_blank" rel="noopener noreferrer">
-              Hosting
+              HOSTING
             </a>
           </li>
           <li>
@@ -18,17 +19,18 @@ const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              E-mail Corporativo
+              E-MAIL CORPORATIVO
             </a>
           </li>
         </ul>
       </div>
+
       <div className="footer-section">
         <h4>SERVICIOS</h4>
         <ul>
           <li>
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              Hogar
+              HOGAR
             </Link>
           </li>
           <li>
@@ -36,7 +38,7 @@ const Footer = () => (
               to="/internet-dedicado"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              Empresas
+              EMPRESAS
             </Link>
           </li>
           <li>
@@ -44,61 +46,63 @@ const Footer = () => (
               to="/tiempo-de-espera"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              Soporte Tecnico
+              SOPORTE TÉCNICO
             </Link>
           </li>
           <li>
             <Link to="/contacto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              Contactenos
+              CONTÁCTENOS
             </Link>
           </li>
         </ul>
       </div>
+
       <div className="footer-section">
         <h4>CONTÁCTENOS</h4>
         <ul>
           <li>
-            <strong> E-mail:</strong> <br />
+            <strong>E-MAIL:</strong>
+            <br />
             <a href="mailto:ventas@internext.com.co">ventas@internext.com.co</a>
           </li>
           <li>
-            <strong>Teléfono: </strong>
+            <strong>TELÉFONO:</strong>
             <br />
             <a href="tel:+573009123399">(+57) 300 9123399</a>
           </li>
           <li>
-            <strong>Horario:</strong> <br />
-            Lun-Vie 9:00AM - 5:00PM
+            <strong>HORARIO:</strong>
+            <br />
+            LUN-VIE 9:00AM - 5:00PM
           </li>
         </ul>
       </div>
+
       <div className="footer-section">
-        <h4>SÍGUENOS EN:</h4>
-        <ul>
-          {/* Ejemplo de redes sociales */}
-          <li>
-            <a
-              href="https://facebook.com/internextcolombia"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://instagram.com/internextcolombia"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-          </li>
-        </ul>
+        <h4>SÍGUENOS EN</h4>
+        <div className="social-icons">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <FaFacebookF />
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
+          </a>
+        </div>
       </div>
     </div>
+
     <div className="footer-bottom">
-      <p>&copy; 2024 Galaxy Internet. Todos los derechos reservados.</p>
+      <p>&copy; 2024 Galaxy Internet. TODOS LOS DERECHOS RESERVADOS.</p>
     </div>
   </footer>
 )

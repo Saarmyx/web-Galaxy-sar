@@ -12,11 +12,6 @@ const DoubleHeader = ({ active }) => {
           <img src="/logo.png" alt="Logo" />
         </div>
 
-        {/* Icono para móvil */}
-        <div className="icono">
-          <img src="/icono.png" alt="Icon" />
-        </div>
-
         <div className="number">(+57) 300 9122259</div>
       </div>
 

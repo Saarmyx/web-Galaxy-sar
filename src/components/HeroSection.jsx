@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const HeroSection = () => (
   <section className="seccion-hero">
@@ -25,6 +25,6 @@ const HeroSection = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default HeroSection;
+export default HeroSection
