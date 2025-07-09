@@ -19,6 +19,7 @@
 }
 
 .zona-texto {
+  text-align: left;
   max-width: 800px;
   font-family: 'LemonMilk';
 }
@@ -41,16 +42,18 @@
 }
 
 .tv-adicional {
-  font-size: 60px;
+  width: 100%;
+  text-align: left !important;
+  font-size: 67px;
   color: #fff;
-}
+  margin: 0;
+  align-self: flex-start;
 
-.caja-resaltada {
   background: #ffc400;
-  color: #000;
-  font-size: 24px;
+
   font-weight: bold;
-  padding: 2px 20px;
+  padding: 2px 30px 2px 2px;
+
   display: inline-block;
 }
 
@@ -224,12 +227,11 @@
 /* Móvil (425px y menos) */
 @media (max-width: 425px) {
   .seccion-hero {
-    height: auto;
+    height: 250px;
   }
 
   .contenido-hero {
     display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 0 15px;
   }
@@ -255,7 +257,7 @@
   }
 
   .tv-adicional {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .contenedor-estrellas img {
@@ -264,6 +266,7 @@
 
   .zona-imagen img {
     height: 200px;
+    margin-top: 20px;
   }
 
   .filtro-izquierdo {

@@ -104,8 +104,8 @@
 
 .service-container .note {
   font-family: 'Roboto';
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 300;
   color: #000;
   padding-bottom: 50px;
 }
@@ -168,7 +168,7 @@
   }
 
   .service-container .note {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
@@ -223,6 +223,7 @@
   /* ===== Servicios ===== */
   .service-section {
     align-items: center;
+    text-align: center;
     padding: 40px 20px;
     gap: 30px;
   }
@@ -298,7 +299,7 @@
   }
 
   .service-text p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .service-container h2 {
@@ -330,9 +331,5 @@
 
   .info-item img {
     width: 100px;
-  }
-
-  .info-item p {
-    font-size: 14px;
   }
 }

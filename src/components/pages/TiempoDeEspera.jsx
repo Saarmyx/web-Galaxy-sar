@@ -11,7 +11,7 @@ const TiempoDeEspera = () => {
       <main className="min-h-screen bg-white text-gray-800" aria-label="Contenido principal">
         <section className="service-section">
           <div className="service-text">
-            <div className="contenedor-estrellas">
+            <div className="contenedor-estrellas-s">
               <h1>
                 <span className="highlight">TIEMPO DE ESPERA</span>
               </h1>
