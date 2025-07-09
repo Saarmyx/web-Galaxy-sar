@@ -197,11 +197,14 @@
   }
   .plan-card {
     max-width: 60vw;
-    padding: 32px 0;
+    padding: 32px 20px;
   }
   .plan-header {
     margin: -22px 16px 14px 16px;
     padding: 10px;
+  }
+  .plan-features {
+    padding: 20px;
   }
 }
 
@@ -219,7 +222,7 @@
     padding: 8px;
   }
   .plan-features {
-    padding: 12px;
+    padding: 0px;
   }
 }
 
