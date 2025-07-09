@@ -1,76 +1,80 @@
-import React from "react";
+// PlansSection.jsx
+import React from 'react'
+import './PlansSection.css'
 
-const PlanCard = ({ title, firstMonth, speed, features, monthly }) => (
-  <div className="plan-card">
-    <div className="plan-header">{title}</div>
-    <div className="plan-price">$ {firstMonth}</div>
-    <div className="plan-period">El primer mes</div>
+export default function PlansSection() {
+  const plans = [
+    {
+      name: 'PLAN BRONCE',
+      promoPrice: '$ 42.450',
+      megas: '100',
+      features: ['1 PUNTO DE TV DIGITAL HD'],
+      regularPrice: '$84.900/MES',
+    },
+    {
+      name: 'PLAN ORO',
+      promoPrice: '$ 62.430',
+      megas: '400',
+      features: ['2 PUNTOS DE TV DIGITAL HD', '2 PUNTOS DE TV APP', 'WIFI 5G'],
+      regularPrice: '$124.900/MES',
+    },
+    {
+      name: 'PLAN PLATA',
+      promoPrice: '$ 52.450',
+      megas: '200',
+      features: ['2 PUNTOS DE TV DIGITAL HD', '1 PUNTO DE TV APP'],
+      regularPrice: '$104.900/MES',
+    },
+  ]
 
-    <div className="plan-features">
-      <h4>Incluye</h4>
-      <div className="plan-speed">
-        {speed} <span>MEGAS</span>
+  return (
+    <div>
+      <div className="plans-header">
+        <h2>PLANES ILIMITADOS</h2>
+        <p>
+          Todos nuestros planes son instalados utilizando
+          <br />
+          Fibra Óptica de alta velocidad
+        </p>
       </div>
-      <div className="plan-details">
-        {features.map((f, i) => (
-          <div className="plan-detail-item" key={i}>
-            <div className="check-icon"></div>
-            <span>{f}</span>
+      <section className="plans-section">
+        {plans.map((plan, index) => (
+          <div key={index} className="plan-card">
+            <div className="plan-header">
+              <h3>{plan.name}</h3>
+            </div>
+            <div className="plan-price">
+              <h3>{plan.promoPrice}</h3>
+              <p>El primer mes</p>
+            </div>
+            <div className="plan-features">
+              <h4>Incluye</h4>
+              <div className="features-list">
+                <div className="feature-item mega-item">
+                  <span className="feature-check">✓</span>
+                  <span className="feature-highlight">
+                    {plan.megas} <span className="feature-unit">MEGAS</span>
+                  </span>
+                </div>
+                {plan.features.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="feature-item">
+                    <span className="feature-check">✓</span>
+                    <span className="feature-description">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="plan-regular-price">
+              <h4>{plan.regularPrice}</h4>
+              <p>
+                VALOR A CANCELAR A PARTIR DEL
+                <br />
+                SEGUNDO MES
+              </p>
+            </div>
           </div>
         ))}
-      </div>
+      </section>
     </div>
-
-    <div className="plan-bottom">
-      <div className="plan-monthly">${monthly}/mes</div>
-      <div className="plan-disclaimer">
-        VALOR A CANCELAR A PARTIR DEL
-        <br />
-        SEGUNDO MES
-      </div>
-    </div>
-  </div>
-);
-
-const PlansSection = () => (
-  <section className="plans-section">
-    <div className="plans-content">
-      <h2 className="plans-title">Planes Ilimitados</h2>
-      <p className="plans-subtitle">
-        Todos nuestros planes son instalados utilizando
-        <br />
-        Fibra Óptica de alta velocidad
-      </p>
-
-      <div className="plans-grid">
-        <PlanCard
-          title="PLAN BRONCE"
-          firstMonth="42.450"
-          speed="100"
-          monthly="84.900"
-          features={["1 PUNTO DE TV DIGITAL HD"]}
-        />
-        <PlanCard
-          title="PLAN ORO"
-          firstMonth="62.430"
-          speed="400"
-          monthly="124.900"
-          features={[
-            "2 PUNTOS DE TV DIGITAL HD",
-            "2 PUNTOS DE TV APP",
-            "WIFI 5G",
-          ]}
-        />
-        <PlanCard
-          title="PLAN PLATA"
-          firstMonth="52.450"
-          speed="200"
-          monthly="104.900"
-          features={["2 PUNTOS DE TV DIGITAL HD", "1 PUNTO DE TV APP"]}
-        />
-      </div>
-    </div>
-  </section>
-);
-
-export default PlansSection;
+  )
+}

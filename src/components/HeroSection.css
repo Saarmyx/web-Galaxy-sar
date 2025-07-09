@@ -293,3 +293,25 @@
     );
   }
 }
+
+@media (max-width: 375px) {
+  .zona-texto h1 {
+    font-size: 20px;
+  }
+
+  .zona-texto .inter {
+    font-size: 25px;
+  }
+
+  .subrayado {
+    font-size: 30px;
+  }
+
+  .tv-adicional {
+    font-size: 18px;
+  }
+
+  .contenedor-estrellas img {
+    width: 50px;
+  }
+}
