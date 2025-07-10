@@ -198,11 +198,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
  
-=======
-  padding: 80px 20px 60px 20px;
->>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
 }
 
 .mobile-nav.open {
@@ -340,20 +336,12 @@ ul {
   }
 
   .hamburger:hover {
-<<<<<<< HEAD
     color: var(--color-negro);
-=======
-    color: var(--color-blanco);
->>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
     transform: translateY(-50%) scale(1.1);
   }
 
   .hamburger.open {
-<<<<<<< HEAD
     color: var(--color-negro);
-=======
-    color: var(--color-blanco);
->>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
     transform: translateY(-50%) rotate(180deg);
   }
 
@@ -416,32 +404,18 @@ ul {
   }
 
   .hamburger {
-<<<<<<< HEAD
    
-=======
-    right: 15px;
-    font-size: 28px;
->>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
     padding: 6px 10px;
   }
 
   .hamburger:hover {
-<<<<<<< HEAD
     color: var(--color-negro);
-=======
-    color: var(--color-blanco);
->>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
     transform: translateY(-50%) scale(1.1);
   }
 
   .hamburger.open {
-<<<<<<< HEAD
     color: var(--color-negro);
     transform: translateY(-50%) rotate(180deg) ;
-=======
-    color: var(--color-blanco);
-    transform: translateY(-50%) rotate(180deg);
->>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   }
 
   .mobile-nav li a {
