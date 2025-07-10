@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Plans Header Styles - MEJORADO */
 .plans-header {
   text-align: center;
@@ -9,12 +10,71 @@
   font-size: clamp(24px, 5vw, 44px);
   font-weight: bold;
   color: #ffa500;
+=======
+/* PlansSection.css */
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Plans Header Styles */
+.plans-header {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.plans-header h2 {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: bold;
+  color: #ffa500;
+  margin-bottom: 15px;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .plans-header p {
   color: #888;
+<<<<<<< HEAD
   line-height: 1.2;
   margin: 0;
   font-family: CovesLight;
@@ -22,12 +82,26 @@
 }
 
 /* Plans Section Styles - MEJORADO */
+=======
+  line-height: 1.4;
+  margin: 0;
+  font-family: CovesLight;
+  font-size: clamp(16px, 3vw, 26px);
+}
+
+/* Plans Section Styles */
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
 .plans-section {
   display: flex;
   justify-content: center;
   gap: 20px;
+<<<<<<< HEAD
   align-items: stretch;
   padding: 20px 15px;
+=======
+  align-items: center;
+  padding: 20px;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
@@ -36,11 +110,18 @@
   background: #ffffff;
   border: 2px solid rgba(2, 2, 2, 0.2);
   border-radius: 0 0 12px 12px;
+<<<<<<< HEAD
   padding: 0;
   flex: 1;
   min-width: 280px;
   max-width: 350px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+=======
+  padding: 10px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
 }
 
 .plan-header {
@@ -54,7 +135,11 @@
 .plan-header h3 {
   font-family: 'cunia';
   text-transform: uppercase;
+<<<<<<< HEAD
   font-size: clamp(20px, 4vw, 30px);
+=======
+  font-size: clamp(24px, 4vw, 30px);
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   font-weight: bold;
   color: #000;
   margin: 0;
@@ -68,7 +153,11 @@
 
 .plan-price h3 {
   font-family: 'cunia';
+<<<<<<< HEAD
   font-size: clamp(28px, 5vw, 38px);
+=======
+  font-size: clamp(32px, 5vw, 38px);
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   font-weight: bold;
   color: #333;
   margin-bottom: 5px;
@@ -76,7 +165,11 @@
 
 .plan-price p {
   font-family: 'cunia';
+<<<<<<< HEAD
   font-size: clamp(11px, 2vw, 14px);
+=======
+  font-size: clamp(12px, 2vw, 14px);
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   color: #666;
   margin: 0;
 }
@@ -86,16 +179,25 @@
   padding: 20px;
   font-family: 'Roboto';
   font-weight: bold;
+<<<<<<< HEAD
   flex-grow: 1;
+=======
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
 }
 
 .plan-features h4 {
   font-family: 'cunia';
   text-align: center;
+<<<<<<< HEAD
   font-size: clamp(18px, 3vw, 25px);
   color: #333;
   font-weight: normal;
   margin-bottom: 15px;
+=======
+  font-size: clamp(20px, 3vw, 25px);
+  color: #333;
+  font-weight: normal;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
 }
 
 .features-list {
@@ -113,23 +215,36 @@
   display: flex;
   align-items: center;
   gap: 10px;
+<<<<<<< HEAD
   font-size: clamp(28px, 6vw, 48px);
+=======
+  font-size: clamp(36px, 6vw, 48px);
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   color: #ffa500;
   font-weight: bolder;
   line-height: 1;
 }
 
 .feature-unit {
+<<<<<<< HEAD
   font-size: clamp(14px, 3vw, 20px);
   color: #ffa500;
   font-weight: bold;
   background: #000000;
   padding: 2px 4px;
   border-radius: 2px;
+=======
+  font-size: clamp(16px, 3vw, 20px);
+  color: #ffa500;
+  font-weight: bold;
+  background: #000000;
+  padding: 2px;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
 }
 
 .feature-check {
   color: #ffa500;
+<<<<<<< HEAD
   font-size: clamp(14px, 3vw, 20px);
   font-weight: bold;
   margin-right: 8px;
@@ -139,35 +254,68 @@
   font-size: clamp(12px, 2vw, 15px);
   color: #333;
   line-height: 1.3;
+=======
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.feature-description {
+  font-size: clamp(13px, 2vw, 15px);
+  color: #333;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
 }
 
 .plan-regular-price {
   text-align: center;
+<<<<<<< HEAD
   padding: 25px 15px 20px 15px;
+=======
+  padding-top: 25px;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   background: #fff;
 }
 
 .plan-regular-price h4 {
   font-family: 'cunia';
+<<<<<<< HEAD
   font-size: clamp(16px, 3vw, 20px);
   font-weight: bold;
   color: #333;
   margin-bottom: 8px;
+=======
+  font-size: clamp(18px, 3vw, 20px);
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
 }
 
 .plan-regular-price p {
   font-family: 'Roboto';
+<<<<<<< HEAD
   font-size: clamp(9px, 2vw, 12px);
+=======
+  font-size: clamp(10px, 2vw, 12px);
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   color: #666;
   text-transform: uppercase;
   line-height: 1.2;
 }
 
+<<<<<<< HEAD
 /* Media Queries específicas para Plans */
 @media (max-width: 768px) {
   .plans-section {
     flex-direction: column;
     gap: 25px;
+=======
+/* Media Queries para responsive */
+@media (max-width: 768px) {
+  .plans-section {
+    flex-direction: column;
+    gap: 30px;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
     align-items: center;
   }
 
@@ -184,6 +332,7 @@
 
 @media (max-width: 480px) {
   .plans-section {
+<<<<<<< HEAD
     padding: 15px 70px;
     gap: 20px;
   }
@@ -195,6 +344,19 @@
 
   .plan-header {
     padding: 12px 10px;
+=======
+    padding: 15px;
+    gap: 25px;
+  }
+
+  .plan-card {
+    padding: 8px;
+    max-width: 100%;
+  }
+
+  .plan-header {
+    padding: 12px;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   }
 
   .plan-price {
@@ -202,11 +364,19 @@
   }
 
   .plan-features {
+<<<<<<< HEAD
     padding: 15px 12px;
   }
 
   .plan-regular-price {
     padding: 20px 10px 15px 10px;
+=======
+    padding: 15px;
+  }
+
+  .plan-regular-price {
+    padding-top: 20px;
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   }
 
   .plans-header {
@@ -214,6 +384,7 @@
     padding: 10px;
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 375px) {
   .plans-section {
@@ -234,3 +405,5 @@
     min-width: 100%;
   }
 }
+=======
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d

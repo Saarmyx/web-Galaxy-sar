@@ -225,7 +225,11 @@
 }
 
 /* Móvil (425px y menos) */
+<<<<<<< HEAD
 @media (max-width: 430px) {
+=======
+@media (max-width: 425px) {
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   .seccion-hero {
     height: 250px;
   }
@@ -294,7 +298,11 @@
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 410px) {
+=======
+@media (max-width: 375px) {
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
   .zona-texto h1 {
     font-size: 20px;
   }
@@ -315,9 +323,12 @@
     width: 50px;
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 320px) {
 
 
 }
 
+=======
+>>>>>>> a06d36311d36bcfdfa14611e166cf9f17e76c56d
