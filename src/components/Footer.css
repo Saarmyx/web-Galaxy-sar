@@ -1,0 +1,141 @@
+/* ---------- Footer ---------- */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 80px 0 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px;
+  padding: 0 80px;
+}
+
+.footer-section h4 {
+  color: #ffa500;
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 14px;
+  transition: color 0.3s;
+}
+
+.footer-section a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #ffa500;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 40px;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  font-size: 16px;
+  color: #888;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #eee;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffa500;
+  transform: scale(1.2);
+}
+
+/* =========================
+     Responsive Design
+========================= */
+
+/* Tablet horizontal (1024px) */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    padding: 0 60px;
+  }
+
+  .footer-section h4 {
+    font-size: 22px;
+  }
+
+  .footer-section li {
+    font-size: 16px;
+  }
+
+  .footer-bottom p {
+    font-size: 15px;
+  }
+}
+
+/* Tablet vertical (768px) */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 40px;
+  }
+
+  .footer-section h4 {
+    font-size: 20px;
+  }
+
+  .footer-section li {
+    font-size: 15px;
+  }
+}
+
+/* Móviles (425px) */
+@media (max-width: 425px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .footer-section h4 {
+    font-size: 18px;
+  }
+
+  .footer-section li {
+    font-size: 14px;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
