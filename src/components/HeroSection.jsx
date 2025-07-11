@@ -17,7 +17,7 @@ const HeroImageSlider = () => {
     },
     {
       id: 3,
-      image: '/sl-2.png',
+      image: '/sl-2.pngo',
       alt: 'Slide 3',
     },
   ]
@@ -64,14 +64,6 @@ const HeroImageSlider = () => {
           />
         ))}
       </div>
-
-      {/* Flechas de navegación */}
-      <button className="slider-arrow prev" onClick={prevSlide} aria-label="Slide anterior">
-        ←
-      </button>
-      <button className="slider-arrow next" onClick={nextSlide} aria-label="Siguiente slide">
-        →
-      </button>
     </div>
   )
 }
