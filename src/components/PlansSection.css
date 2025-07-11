@@ -33,14 +33,17 @@
 }
 
 .plan-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #ffffff;
   border: 2px solid rgba(2, 2, 2, 0.2);
   border-radius: 0 0 12px 12px;
-  padding: 0;
+  padding: 20px;
   flex: 1;
   min-width: 280px;
   max-width: 350px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .plan-header {
@@ -219,7 +222,7 @@
   .plans-section {
     padding: 10px 50px;
   }
-  
+
   .plan-card {
     min-width: 100%;
   }
@@ -229,7 +232,7 @@
   .plans-section {
     padding: 10px 50px;
   }
-  
+
   .plan-card {
     min-width: 100%;
   }
