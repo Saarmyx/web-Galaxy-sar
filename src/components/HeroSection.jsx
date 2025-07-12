@@ -17,7 +17,7 @@ const HeroImageSlider = () => {
     },
     {
       id: 3,
-      image: '/sl-2.pngo',
+      image: '/sl-2.png',
       alt: 'Slide 3',
     },
   ]

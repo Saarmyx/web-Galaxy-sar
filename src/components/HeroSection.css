@@ -28,7 +28,7 @@
 /* Controles del slider */
 .slider-controls {
   position: absolute;
-  bottom: 30px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -37,8 +37,8 @@
 }
 
 .slider-dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
@@ -53,39 +53,6 @@
 
 .slider-dot:hover {
   background: rgba(255, 196, 0, 0.8);
-}
-
-/* Flechas de navegación */
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 196, 0, 0.8);
-  border: none;
-  color: #000;
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-arrow:hover {
-  background: #ffc400;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.slider-arrow.prev {
-  left: 30px;
-}
-
-.slider-arrow.next {
-  right: 30px;
 }
 
 /* Responsive Design */
@@ -109,6 +76,7 @@
 
 @media (max-width: 768px) {
   .slider-container {
+    width: 100%;
     height: 300px;
   }
 
@@ -127,7 +95,10 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 425px) {
+  .slide-image {
+    width: 425px;
+  }
   .slider-container {
     height: 250px;
   }
@@ -157,7 +128,10 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
+  .slide-image {
+    width: 375px;
+  }
   .slider-arrow {
     width: 25px;
     height: 25px;
@@ -172,5 +146,11 @@
   .slider-dot {
     width: 8px;
     height: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .slide-image {
+    width: 320px;
   }
 }
