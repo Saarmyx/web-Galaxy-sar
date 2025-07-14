@@ -1,6 +1,5 @@
-// PlansSection.jsx
 import React from 'react'
-import './PlansSection.css'
+import '../styles/PlanSection.css'
 
 export default function PlansSection() {
   const plans = [

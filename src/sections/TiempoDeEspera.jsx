@@ -1,13 +1,9 @@
 import React from 'react'
-import './TiempoDeEspera.css'
-import Header from '../DoubleHeader'
-import Footer from '../Footer'
-import CTASection from '../CTASection'
+import '../styles/TiempoDeEspera.css'
 
 const TiempoDeEspera = () => {
   return (
     <>
-      <Header active="soporte" />
       <main className="min-h-screen bg-white text-gray-800" aria-label="Contenido principal">
         <section className="service-section">
           <div className="service-text">
@@ -43,13 +39,7 @@ const TiempoDeEspera = () => {
             <p>Soporte y Respuesta inmediata</p>
           </div>
         </section>
-
-        {/* Llamado a la acción */}
-        <section aria-label="Llamado a la acción">
-          <CTASection />
-        </section>
       </main>
-      <Footer />
     </>
   )
 }

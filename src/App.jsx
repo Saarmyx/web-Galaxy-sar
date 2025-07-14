@@ -1,52 +1,30 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-// Componentes globales
-import DoubleHeader from './components/DoubleHeader'
+import Header from './components/Navbar'
 import Footer from './components/Footer'
 
-// Secciones de la página principal
-import HeroSection from './components/HeroSection'
-import PlansSection from './components/PlansSection'
-import CTASection from './components/CTASection'
+import Inicio from './pages/Inicio'
+import Empresas from './pages/Empresa'
+import Soporte from './pages/Soporte'
+import Contacto from './pages/Contacto'
 
-// Páginas individuales
-import TiempoDeEspera from './components/pages/TiempoDeEspera'
-import InternetDedicado from './components/pages/InternetDedicado'
-
-// Estilos
-import './components/DoubleHeader.css'
-import './components/HeroSection.css'
-import './components/PlansSection.css'
-import './components/CTASection.css'
-import './components/Footer.css'
-import './components/pages/TiempoDeEspera.css'
-import './components/pages/Empresas.css'
+import CtaSection from './components/CtaSection'
 
 function App() {
   return (
-    <div className="app-container">
-      <DoubleHeader />
-
+    <>
+      <Header />
       <main>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <HeroSection />
-                <PlansSection />
-                <CTASection />
-              </>
-            }
-          />
-          <Route path="/tiempo-de-espera" element={<TiempoDeEspera />} />
-          <Route path="/internet-dedicado" element={<InternetDedicado />} />
+          <Route path="/" element={<Inicio />} />
+          <Route path="/empresas" element={<Empresas />} />
+          <Route path="/soporte" element={<Soporte />} />
+          <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </main>
-
+      <CtaSection />
       <Footer />
-    </div>
+    </>
   )
 }
 

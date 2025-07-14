@@ -1,32 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import './DoubleHeader.css'
+import { Link, useLocation } from 'react-router-dom'
+import '../styles/DoubleHeader.css'
 
-const DoubleHeader = ({ active }) => {
+const DoubleHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
 
   const toggleMenu = () => setMenuOpen(!menuOpen)
-
   const closeMenu = () => setMenuOpen(false)
 
-  // Cerrar menú al hacer clic fuera o presionar Escape
+  const isActive = (path) => (location.pathname === path ? 'activo' : '')
+
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuOpen && !event.target.closest('.mobile-nav') && !event.target.closest('.hamburger')) {
+    const handleClickOutside = (e) => {
+      if (menuOpen && !e.target.closest('.mobile-nav-content') && !e.target.closest('.hamburger')) {
         closeMenu()
       }
     }
 
-    const handleEscapeKey = (event) => {
-      if (event.key === 'Escape' && menuOpen) {
-        closeMenu()
-      }
+    const handleEscapeKey = (e) => {
+      if (e.key === 'Escape') closeMenu()
     }
 
     if (menuOpen) {
       document.addEventListener('click', handleClickOutside)
       document.addEventListener('keydown', handleEscapeKey)
-      // Prevenir scroll del body cuando el menú está abierto
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = 'unset'
@@ -40,111 +38,80 @@ const DoubleHeader = ({ active }) => {
   }, [menuOpen])
 
   return (
-    <div>
-      {/* Header superior */}
+    <header>
       <div className="top-header">
         <div className="logo">
-          <img src="/logo.png" alt="Logo" />
+          <Link to="/">
+            <img src="/logo.png" alt="Logo de la empresa" />
+          </Link>
         </div>
         <div className="number">(+57) 300 9122259</div>
       </div>
 
-      {/* Barra de navegación */}
       <div className="nav-bar">
-        <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <button
+          className={`hamburger ${menuOpen ? 'open' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Menú de navegación"
+          aria-expanded={menuOpen}
+        >
           {menuOpen ? '✖' : '☰'}
-        </div>
+        </button>
 
-        {/* Navegación escritorio */}
         <nav className="desktop-nav">
           <ul>
             <li>
-              <Link
-                to="/"
-                className={
-                  !active ||
-                  (active !== 'dedicado' && active !== 'soporte' && active !== 'contacto')
-                    ? 'activo'
-                    : ''
-                }
-              >
+              <Link to="/" className={isActive('/')}>
                 INICIO
               </Link>
             </li>
             <li>
-              <Link to="/internet-dedicado" className={active === 'dedicado' ? 'activo' : ''}>
+              <Link to="/empresas" className={isActive('/empresas')}>
                 EMPRESAS
               </Link>
             </li>
             <li>
-              <Link to="/tiempo-de-espera" className={active === 'soporte' ? 'activo' : ''}>
+              <Link to="/soporte" className={isActive('/soporte')}>
                 SOPORTE
               </Link>
             </li>
             <li>
-              <Link to="/contacto" className={active === 'contacto' ? 'activo' : ''}>
+              <Link to="/contacto" className={isActive('/contacto')}>
                 CONTACTO
               </Link>
             </li>
           </ul>
         </nav>
 
-        {/* Navegación móvil */}
         <nav className={`mobile-nav ${menuOpen ? 'open' : ''}`}>
-          {/* Overlay para cerrar el menú */}
-          <div className="mobile-nav-overlay" onClick={closeMenu}></div>
-
           <div className="mobile-nav-content">
             <ul>
               <li>
-                <Link
-                  to="/"
-                  className={
-                    !active ||
-                    (active !== 'dedicado' && active !== 'soporte' && active !== 'contacto')
-                      ? 'activo'
-                      : ''
-                  }
-                  onClick={closeMenu}
-                >
+                <Link to="/" className={isActive('/')} onClick={closeMenu}>
                   INICIO
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/internet-dedicado"
-                  className={active === 'dedicado' ? 'activo' : ''}
-                  onClick={closeMenu}
-                >
+                <Link to="/empresas" className={isActive('/empresas')} onClick={closeMenu}>
                   EMPRESAS
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/tiempo-de-espera"
-                  className={active === 'soporte' ? 'activo' : ''}
-                  onClick={closeMenu}
-                >
+                <Link to="/soporte" className={isActive('/soporte')} onClick={closeMenu}>
                   SOPORTE
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/contacto"
-                  className={active === 'contacto' ? 'activo' : ''}
-                  onClick={closeMenu}
-                >
+                <Link to="/contacto" className={isActive('/contacto')} onClick={closeMenu}>
                   CONTACTO
                 </Link>
               </li>
             </ul>
-
             <div className="mobile-social-icons">
               <a
                 href="https://facebook.com/internextcolombia"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
               >
                 <img src="/facebook.png" alt="Facebook" />
               </a>
@@ -152,7 +119,6 @@ const DoubleHeader = ({ active }) => {
                 href="https://instagram.com/internextcolombia"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
               >
                 <img src="/instagram.png" alt="Instagram" />
               </a>
@@ -160,7 +126,7 @@ const DoubleHeader = ({ active }) => {
           </div>
         </nav>
       </div>
-    </div>
+    </header>
   )
 }
 

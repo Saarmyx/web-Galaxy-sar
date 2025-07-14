@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'CovesBold';
+  src: url('src/assets/fonts/Coves/CovesBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CovesLight';
+  src: url('src/assets/fonts/Coves/CovesLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('src/assets/fonts/lemon_milk/LEMONMILK-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cunia';
+  src: url('src/assets/fonts/cunia/Cunia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset general */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  font-family: 'LemonMilk', 'CovesBold', sans-serif;
+  font-size: 18px;
+  background-color: var(--color-blanco);
+  color: var(--color-negro);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+/* Variables de color */
+:root {
+  --color-principal: #f5b500;
+  --color-negro: #000000;
+  --color-blanco: #f1f1f1;
+  --color-gris-oscuro: #333333;
+  --color-gris-claro: #888888;
+  --color-linea: rgba(2, 2, 2, 0.2);
+  --color-destacado: #ffa500;
+}
