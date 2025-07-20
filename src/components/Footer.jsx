@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import '../styles/Footer.css'
 
 const Footer = () => (
@@ -86,7 +85,7 @@ const Footer = () => (
             rel="noopener noreferrer"
             aria-label="Facebook"
           >
-            <FaFacebookF />
+            <i className="fab fa-facebook-f"></i>
           </a>
           <a
             href="https://instagram.com/internextcolombia"
@@ -94,7 +93,7 @@ const Footer = () => (
             rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <FaInstagram />
+            <i className="fab fa-instagram"></i>
           </a>
         </div>
       </div>

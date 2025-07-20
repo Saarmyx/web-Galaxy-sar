@@ -25,7 +25,18 @@
   font-style: normal;
 }
 
-/* Reset general */
+/* Variables de color */
+:root {
+  --color-principal: #f5b500;
+  --color-negro: #000000;
+  --color-blanco: #f1f1f1;
+  --color-gris-oscuro: #333333;
+  --color-gris-claro: #888888;
+  --color-linea: rgba(2, 2, 2, 0.2);
+  --color-destacado: #ffa500;
+}
+
+/* Reset mejorado */
 *,
 *::before,
 *::after {
@@ -37,39 +48,41 @@
   vertical-align: baseline;
 }
 
-html,
-body {
+/* Elementos estructurales */
+html {
   height: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  font-family: 'LemonMilk', 'CovesBold', sans-serif;
   font-size: 18px;
+}
+
+body {
+  height: 100%;
+  font-family: 'LemonMilk', 'CovesBold', sans-serif;
   background-color: var(--color-blanco);
   color: var(--color-negro);
+  overflow-x: hidden;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  background: none;
-  border: none;
-  outline: none;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
+/* Elementos de contenido */
+main,
+header,
+footer,
+section,
+article,
+nav,
+aside,
+figure,
+figcaption,
+details,
+summary {
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 
+/* Títulos y texto */
 h1,
 h2,
 h3,
@@ -79,17 +92,272 @@ h6 {
   font-weight: bold;
   margin: 0 0 0.5em 0;
   line-height: 1.2;
+  color: inherit;
 }
 
+p,
+blockquote,
+pre,
+address,
+dl,
+dt,
+dd {
+  margin: 0 0 1em 0;
+}
+
+/* Listas */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlaces */
 a {
   text-decoration: none;
   transition: color 0.3s ease;
   color: inherit;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
 }
 
-ul {
+a:hover,
+a:focus {
+  outline: 0;
+}
+
+/* Medios */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+svg {
+  overflow: hidden;
+}
+
+/* Formularios */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button:disabled,
+input:disabled {
+  cursor: default;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+}
+
+input[type='search'] {
+  outline-offset: -2px;
+}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Elementos inline */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+mark {
+  background-color: var(--color-destacado);
+  color: inherit;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Elementos de flujo */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid var(--color-linea);
+  margin: 1em 0;
+}
+
+/* Elementos ocultos */
+[hidden] {
+  display: none;
+}
+
+/* Elementos multimedia */
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* Elementos de template */
+template {
+  display: none;
+}
+
+/* Correcciones para accesibilidad */
+:focus {
+  outline: 2px solid var(--color-principal);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Mejoras de rendimiento */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Elementos de formulario específicos */
+fieldset {
+  border: 1px solid var(--color-linea);
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* Elementos de cita */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* Elementos de definición */
+dfn {
+  font-style: italic;
+}
+
+/* Elementos de énfasis */
+em,
+i {
+  font-style: italic;
+}
+
+/* Elementos de formato */
+small {
+  font-size: 80%;
+}
+
+/* Elementos de navegación */
+nav ul,
+nav ol {
   list-style: none;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elementos de contenido embebido */
+embed,
+object,
+iframe {
+  border: 0;
+  vertical-align: bottom;
 }
 
 /* Variables de color */

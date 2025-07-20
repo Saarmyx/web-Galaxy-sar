@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
 import { Eye, EyeOff, Mail, Lock, User, X } from 'lucide-react'
-import '../styles/DoubleHeader.css'
-import '../styles/LoginModal.css'
 
-const DoubleHeader = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+export default function LoginModal() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isLogin, setIsLogin] = useState(true)
   const [showPassword, setShowPassword] = useState(false)
@@ -16,20 +12,34 @@ const DoubleHeader = () => {
   })
   const [errors, setErrors] = useState({})
   const [isLoading, setIsLoading] = useState(false)
-  const location = useLocation()
 
-  const toggleMenu = () => setMenuOpen(!menuOpen)
-  const closeMenu = () => setMenuOpen(false)
+  // Cerrar modal con ESC
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.keyCode === 27) {
+        closeModal()
+      }
+    }
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEsc)
+      document.body.style.overflow = 'hidden' // Prevenir scroll
+    } else {
+      document.body.style.overflow = 'unset'
+    }
 
-  const isActive = (path) => (location.pathname === path ? 'activo' : '')
+    return () => {
+      document.removeEventListener('keydown', handleEsc)
+      document.body.style.overflow = 'unset'
+    }
+  }, [isModalOpen])
 
-  // Modal functions
   const openModal = () => {
     setIsModalOpen(true)
   }
 
   const closeModal = () => {
     setIsModalOpen(false)
+    // Resetear formulario al cerrar
     setFormData({ email: '', password: '', name: '' })
     setErrors({})
     setIsLogin(true)
@@ -89,156 +99,28 @@ const DoubleHeader = () => {
       setIsLoading(false)
       alert(isLogin ? 'Inicio de sesión exitoso!' : 'Registro exitoso!')
       console.log('Form data:', formData)
-      closeModal()
+      closeModal() // Cerrar modal después del éxito
     }, 1500)
   }
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (menuOpen && !e.target.closest('.mobile-nav-content') && !e.target.closest('.hamburger')) {
-        closeMenu()
-      }
-    }
-
-    const handleEscapeKey = (e) => {
-      if (e.key === 'Escape') {
-        closeMenu()
-        if (isModalOpen) closeModal()
-      }
-    }
-
-    if (menuOpen || isModalOpen) {
-      document.addEventListener('click', handleClickOutside)
-      document.addEventListener('keydown', handleEscapeKey)
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside)
-      document.removeEventListener('keydown', handleEscapeKey)
-      document.body.style.overflow = 'unset'
-    }
-  }, [menuOpen, isModalOpen])
-
   return (
     <>
-      <header>
-        <div className="top-header">
-          <div className="logo">
-            <Link to="/">
-              <img src="/logo.png" alt="Logo de la empresa" />
-            </Link>
-          </div>
-          <div className="header-right">
-            <div className="number">(+57) 300 9122259</div>
-            <button onClick={openModal} className="login-btn">
-              INGRESAR
-            </button>
-          </div>
-        </div>
+      {/* Botón para abrir modal */}
+      <button onClick={openModal} className="login-btn">
+        INGRESAR
+      </button>
 
-        <div className="nav-bar">
-          <button
-            className={`hamburger ${menuOpen ? 'open' : ''}`}
-            onClick={toggleMenu}
-            aria-label="Menú de navegación"
-            aria-expanded={menuOpen}
-          >
-            <i className={`fas ${menuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
-          </button>
-
-          <nav className="desktop-nav">
-            <ul>
-              <li>
-                <Link to="/" className={isActive('/')}>
-                  INICIO
-                </Link>
-              </li>
-              <li>
-                <Link to="/empresas" className={isActive('/empresas')}>
-                  EMPRESAS
-                </Link>
-              </li>
-              <li>
-                <Link to="/soporte" className={isActive('/soporte')}>
-                  SOPORTE
-                </Link>
-              </li>
-              <li>
-                <Link to="/contacto" className={isActive('/contacto')}>
-                  CONTACTO
-                </Link>
-              </li>
-            </ul>
-          </nav>
-
-          <nav className={`mobile-nav ${menuOpen ? 'open' : ''}`}>
-            <div className="mobile-nav-content">
-              <ul>
-                <li>
-                  <Link to="/" className={isActive('/')} onClick={closeMenu}>
-                    INICIO
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/empresas" className={isActive('/empresas')} onClick={closeMenu}>
-                    EMPRESAS
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/soporte" className={isActive('/soporte')} onClick={closeMenu}>
-                    SOPORTE
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contacto" className={isActive('/contacto')} onClick={closeMenu}>
-                    CONTACTO
-                  </Link>
-                </li>
-              </ul>
-              <div className="mobile-login">
-                <button
-                  onClick={() => {
-                    openModal()
-                    closeMenu()
-                  }}
-                  className="mobile-login-btn"
-                >
-                  Iniciar Sesión
-                </button>
-              </div>
-              <div className="mobile-social-icons">
-                <a
-                  href="https://facebook.com/internextcolombia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  href="https://instagram.com/internextcolombia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-      {/* Login Modal */}
+      {/* Modal */}
       {isModalOpen && (
         <div className="modal-backdrop" onClick={handleBackdropClick}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            {/* Botón cerrar */}
             <button onClick={closeModal} className="modal-close">
               <X size={24} />
             </button>
 
             <div className="login-card">
+              {/* Header */}
               <div className="login-header">
                 <div className="login-avatar">
                   <User />
@@ -250,6 +132,7 @@ const DoubleHeader = () => {
               </div>
 
               <div className="login-form">
+                {/* Nombre */}
                 {!isLogin && (
                   <div className="form-group">
                     <label className="form-label">Nombre</label>
@@ -268,6 +151,7 @@ const DoubleHeader = () => {
                   </div>
                 )}
 
+                {/* Email */}
                 <div className="form-group">
                   <label className="form-label">Email</label>
                   <div className="input-container">
@@ -284,6 +168,7 @@ const DoubleHeader = () => {
                   {errors.email && <p className="form-error">{errors.email}</p>}
                 </div>
 
+                {/* Contraseña */}
                 <div className="form-group">
                   <label className="form-label">Contraseña</label>
                   <div className="input-container">
@@ -307,6 +192,7 @@ const DoubleHeader = () => {
                   {errors.password && <p className="form-error">{errors.password}</p>}
                 </div>
 
+                {/* Recordar contraseña */}
                 {isLogin && (
                   <div className="remember-container">
                     <label className="checkbox-container">
@@ -319,6 +205,7 @@ const DoubleHeader = () => {
                   </div>
                 )}
 
+                {/* Botón principal */}
                 <button onClick={handleSubmit} disabled={isLoading} className="submit-button">
                   {isLoading ? (
                     <div className="loading-container">
@@ -333,12 +220,14 @@ const DoubleHeader = () => {
                 </button>
               </div>
 
+              {/* Divisor */}
               <div className="divider-container">
                 <div className="divider-line"></div>
                 <span className="divider-text">o continúa con</span>
                 <div className="divider-line"></div>
               </div>
 
+              {/* Botones de redes sociales */}
               <div className="social-buttons">
                 <button className="social-button">
                   <svg viewBox="0 0 24 24">
@@ -370,6 +259,7 @@ const DoubleHeader = () => {
                 </button>
               </div>
 
+              {/* Toggle */}
               <div className="toggle-container">
                 <p className="toggle-text">
                   {isLogin ? '¿No tienes cuenta?' : '¿Ya tienes cuenta?'}
@@ -392,5 +282,3 @@ const DoubleHeader = () => {
     </>
   )
 }
-
-export default DoubleHeader
