@@ -60,7 +60,7 @@ const Footer = () => (
           <li>
             <strong>E-mail:</strong>
             <br />
-            <a href="mailto:ventas@internext.com.co">ventas@internext.com.co</a>
+            <a href="mailto:ventas@internext.com.co">ventas@galaxy.com.co</a>
           </li>
           <li>
             <strong>Teléfono:</strong>

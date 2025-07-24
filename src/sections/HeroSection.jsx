@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import '../styles/HeroSection.css'
 
 const slides = [
@@ -16,48 +16,44 @@ const slides = [
   },
   {
     id: 3,
-    image: '/sl-3.png',
-    mobileImage: '/sl-3-mobile.png',
+    image: '/sl-2.png',
+    mobileImage: '/sl-2-mobile.png',
     alt: 'Slide 3',
   },
 ]
 
 const HeroImageSlider = () => {
-  const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length)
-    }, 6000)
-    return () => clearInterval(interval)
-  }, [])
-
   return (
-    <div className="hero-carousel">
-      <div className="hero-carousel-inner">
-        {slides.map((slide, index) => (
-          <div key={slide.id} className={`hero-slide ${index === current ? 'active' : ''}`}>
+    <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
+      {/* Indicadores estilizados */}
+      <div className="carousel-indicators">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to={i}
+            className={i === 0 ? 'active' : ''}
+            aria-current={i === 0}
+            aria-label={`Slide ${i + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Slides */}
+      <div className="carousel-inner">
+        {slides.map((slide, i) => (
+          <div key={slide.id} className={`carousel-item ${i === 0 ? 'active' : ''}`}>
             <picture>
               <source media="(max-width: 430px)" srcSet={slide.mobileImage} />
               <img
                 src={slide.image}
+                className="d-block w-100"
                 alt={slide.alt}
-                className="hero-slide-image"
-                loading={index === 0 ? 'eager' : 'lazy'}
+                loading={i === 0 ? 'eager' : 'lazy'}
               />
             </picture>
           </div>
-        ))}
-      </div>
-
-      <div className="hero-indicators">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            className={`hero-dot ${i === current ? 'active' : ''}`}
-            onClick={() => setCurrent(i)}
-            aria-label={`Slide ${i + 1}`}
-          />
         ))}
       </div>
     </div>

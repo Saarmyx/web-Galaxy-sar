@@ -131,15 +131,9 @@ const DoubleHeader = () => {
               <img src="/logo.png" alt="Logo de la empresa" />
             </Link>
           </div>
-          <div className="header-right">
-            <div className="number">(+57) 300 9122259</div>
-            <button onClick={openModal} className="login-btn">
-              INGRESAR
-            </button>
-          </div>
-        </div>
 
-        <div className="nav-bar">
+          <div className="number">(+57) 300 9122259</div>
+
           <button
             className={`hamburger ${menuOpen ? 'open' : ''}`}
             onClick={toggleMenu}
@@ -148,7 +142,9 @@ const DoubleHeader = () => {
           >
             <i className={`fas ${menuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
           </button>
+        </div>
 
+        <div className="nav-bar">
           <nav className="desktop-nav">
             <ul>
               <li>

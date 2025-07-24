@@ -1,7 +1,7 @@
 .login-btn {
   padding: 10px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background-color: var(--color-principal);
+  color: var(--color-fondo);
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -11,7 +11,7 @@
 
 .login-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px var(--shadow-hover, rgba(0, 0, 0, 0.2));
 }
 
 .modal-backdrop {
@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--backdrop-bg, rgba(0, 0, 0, 0.7));
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -42,9 +42,9 @@
   position: absolute;
   top: -40px;
   right: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--modal-close-bg, rgba(255, 255, 255, 0.2));
   border: none;
-  color: white;
+  color: var(--color-fondo);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -57,7 +57,7 @@
 }
 
 .modal-close:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--modal-close-bg-hover, rgba(255, 255, 255, 0.3));
   transform: scale(1.1);
 }
 
@@ -82,10 +82,10 @@
 }
 
 .login-card {
-  background: white;
+  background: var(--color-fondo);
   border-radius: 24px;
   padding: 32px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px var(--shadow-card, rgba(0, 0, 0, 0.15));
   width: 100%;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .login-avatar {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: var(--color-principal);
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -103,18 +103,18 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
-  color: white;
+  color: var(--color-texto);
 }
 
 .login-title {
   font-size: 28px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--color-texto);
   margin: 0 0 8px 0;
 }
 
 .login-subtitle {
-  color: #666;
+  color: var(--color-subtexto, #666);
   font-size: 16px;
   margin: 0;
 }
@@ -126,7 +126,7 @@
 .form-label {
   display: block;
   font-weight: 600;
-  color: #333;
+  color: var(--color-texto);
   margin-bottom: 8px;
   font-size: 14px;
 }
@@ -142,25 +142,25 @@
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  color: #666;
+  color: var(--color-subtexto, #666);
 }
 
 .form-input {
   width: 100%;
   padding: 16px 16px 16px 48px;
-  border: 2px solid #e1e5e9;
+  border: 2px solid var(--color-borde, #e1e5e9);
   border-radius: 12px;
   font-size: 16px;
   transition: all 0.3s ease;
-  background: #fafafa;
+  background: var(--color-fondo);
   box-sizing: border-box;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: #667eea;
-  background: white;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: var(--color-secundario);
+  background: var(--color-fondo-focus, white);
+  box-shadow: 0 0 0 3px var(--color-shadow-focus, rgba(102, 126, 234, 0.1));
 }
 
 .form-input.with-toggle {
@@ -174,19 +174,19 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: #666;
+  color: var(--color-subtexto, #666);
   cursor: pointer;
   padding: 4px;
   border-radius: 4px;
 }
 
 .password-toggle:hover {
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  background: var(--color-shadow-focus, rgba(102, 126, 234, 0.1));
+  color: var(--color-secundario);
 }
 
 .form-error {
-  color: #ef4444;
+  color: var(--color-error);
   font-size: 14px;
   margin: 8px 0 0 0;
   font-weight: 500;
@@ -207,16 +207,16 @@
 
 .checkbox-input {
   margin-right: 8px;
-  accent-color: #667eea;
+  accent-color: var(--color-secundario);
 }
 
 .checkbox-label {
-  color: #666;
+  color: var(--color-subtexto, #666);
   font-size: 14px;
 }
 
 .forgot-password {
-  color: #667eea;
+  color: var(--color-secundario);
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -228,8 +228,8 @@
 
 .submit-button {
   width: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--color-secundario) 0%, var(--color-principal) 100%);
+  color: var(--color-fondo);
   border: none;
   border-radius: 12px;
   padding: 16px;
@@ -242,7 +242,7 @@
 
 .submit-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 10px 20px var(--color-shadow-focus, rgba(102, 126, 234, 0.3));
 }
 
 .submit-button:disabled {
@@ -261,8 +261,8 @@
 .loading-spinner {
   width: 20px;
   height: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top: 2px solid white;
+  border: 2px solid var(--color-spinner-bg, rgba(255, 255, 255, 0.3));
+  border-top: 2px solid var(--color-fondo);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -285,12 +285,12 @@
 .divider-line {
   flex: 1;
   height: 1px;
-  background: #e1e5e9;
+  background: var(--color-borde, #e1e5e9);
 }
 
 .divider-text {
   padding: 0 16px;
-  color: #666;
+  color: var(--color-subtexto, #666);
   font-size: 14px;
 }
 
@@ -304,10 +304,10 @@
 .social-button {
   width: 100%;
   padding: 12px;
-  border: 2px solid #e1e5e9;
+  border: 2px solid var(--color-borde, #e1e5e9);
   border-radius: 12px;
-  background: white;
-  color: #333;
+  background: var(--color-fondo);
+  color: var(--color-texto);
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -318,8 +318,8 @@
 }
 
 .social-button:hover {
-  border-color: #667eea;
-  background: #f8f9ff;
+  border-color: var(--color-secundario);
+  background: var(--color-hover, #f8f9ff);
 }
 
 .social-button svg {
@@ -332,7 +332,7 @@
 }
 
 .toggle-text {
-  color: #666;
+  color: var(--color-subtexto, #666);
   font-size: 14px;
   margin: 0;
 }
@@ -340,7 +340,7 @@
 .toggle-button {
   background: none;
   border: none;
-  color: #667eea;
+  color: var(--color-secundario);
   font-weight: 600;
   cursor: pointer;
   margin-left: 4px;
@@ -348,7 +348,7 @@
 }
 
 .toggle-button:hover {
-  color: #5a67d8;
+  color: var(--color-hover-secundario, #5a67d8);
 }
 
 @media (max-width: 480px) {
