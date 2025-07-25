@@ -34,36 +34,37 @@ La aplicación estará disponible en http://localhost:5173.
 
 ## 📁 Estructura del Proyecto
 
+```
 web-Galaxy/
 │
-├── public/ # Archivos públicos (favicon, index.html, etc.)
-├── src/ # Código fuente
-│ ├── assets/ # Imágenes, íconos y recursos estáticos
-│ ├── components/ # Componentes reutilizables
-│ │ ├── layout/ # Header, Footer, CTA, etc.
-│ │ └── empresas/ # Secciones específicas para "Empresas"
-│ ├── pages/ # Vistas principales (Inicio, Contacto, Soporte, etc.)
-│ ├── hooks/ # Custom React Hooks
-│ ├── services/ # Lógica de negocio y peticiones HTTP (axios, fetch, etc.)
-│ ├── utils/ # Funciones auxiliares y helpers
-│ ├── App.jsx # Componente raíz (estructura general + rutas)
-│ └── index.css # Estilos globales
+├── public/             # Archivos públicos (favicon, index.html, etc.)
+├── src/                # Código fuente
+│   ├── assets/         # Imágenes, íconos y recursos estáticos
+│   ├── components/     # Componentes reutilizables
+│   │   ├── layout/     # Header, Footer, CTA, etc.
+│   │   └── empresas/   # Secciones específicas para "Empresas"
+│   ├── pages/          # Vistas principales (Inicio, Contacto, Soporte, etc.)
+│   ├── hooks/          # Custom React Hooks
+│   ├── services/       # Lógica de negocio y peticiones HTTP (axios, fetch, etc.)
+│   ├── utils/          # Funciones auxiliares y helpers
+│   ├── App.jsx         # Componente raíz (estructura general + rutas)
+│   └── index.css       # Estilos globales
 │
-├── .eslintrc.cjs # Reglas de calidad de código
-├── vite.config.js # Configuración de Vite
-└── package.json # Scripts, dependencias y metainformación
+├── .eslintrc.cjs       # Reglas de calidad de código
+├── vite.config.js      # Configuración de Vite
+└── package.json        # Scripts, dependencias y metainformación
+```
 
 ## 🔗 Navegación
 
-La app utiliza react-router-dom para enrutamiento SPA. Rutas disponibles:
+La app utiliza **react-router-dom** para enrutamiento SPA. Rutas disponibles:
 
-/ – Página de Inicio
+- `/` – Página de Inicio  
+- `/empresas` – Internet Dedicado (empresarial)  
+- `/soporte` – Estado del servicio y asistencia  
+- `/contacto` – Formulario de contacto y CTA
 
-/empresas – Internet Dedicado (empresarial)
-
-/soporte – Estado del servicio y asistencia
-
-/contacto – Formulario de contacto y CTA
+---
 
 ## 🧰 Linting y Mejores Prácticas
 
@@ -73,29 +74,35 @@ Este proyecto utiliza ESLint para mantener un código limpio:
 npm run lint
 ```
 
-Se recomienda extenderlo con TypeScript y typescript-eslint en entornos de producción. Revisa la plantilla oficial TS + React.
+Se recomienda extenderlo con **TypeScript** y **typescript-eslint** en entornos de producción. Revisa la plantilla oficial React + TypeScript para una mejor integración.
 
-### 📡 Plugins y Rendimiento
+---
+
+## 📡 Plugins y Rendimiento
 
 Este proyecto está optimizado para rendimiento con los siguientes plugins oficiales:
 
-@vitejs/plugin-react – Fast Refresh con Babel.
+- `@vitejs/plugin-react` – Fast Refresh con Babel  
+- `@vitejs/plugin-react-swc` – Alternativa rápida basada en SWC
 
-@vitejs/plugin-react-swc – Alternativa rápida basada en SWC.
+---
 
-### 🧠 Siguientes pasos sugeridos
+## 🧠 Siguientes pasos sugeridos
 
-Migrar a TypeScript para mayor seguridad.
+- Migrar a **TypeScript** para mayor seguridad y mantenibilidad.  
+- Integrar un CMS headless (ej. **Sanity**, **Strapi**) si se requiere contenido dinámico.  
+- Agregar testing con **React Testing Library** + **Jest**.  
+- Implementar **SSR** o **SSG** si se busca un SEO avanzado (migración sugerida: **Next.js** o **Astro**).
 
-Integrar CMS headless (ej. Sanity, Strapi) si se requiere contenido dinámico.
+---
 
-Agregar testing (React Testing Library + Jest).
+## 🛰️ Créditos
 
-Implementar SSR o SSG si se busca SEO avanzado (Next.js o Astro como posibles migraciones).
+Desarrollado por **@Saarmyx** como parte del ecosistema **Galaxy Internet**.
 
-### 🛰️ Créditos
+---
 
-Desarrollado por @Saarmyx como parte del ecosistema Galaxy Internet.
+## 📝 Licencia
 
-###📝 Licencia
-Este proyecto es de código cerrado. Todos los derechos reservados © Galaxy Internet 2024.
+Este proyecto es de **código cerrado**.  
+Todos los derechos reservados © Galaxy Internet 2024.
